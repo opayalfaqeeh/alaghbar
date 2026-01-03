@@ -4,7 +4,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Al-Aghbar Shipping CRM</title>
+    <title>شركة الاغبر للشحن الدولي - CRM</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700&display=swap" rel="stylesheet">
     <style>
@@ -12,14 +12,26 @@
         font-family: 'Tajawal', sans-serif;
         background-color: #f8fafc;
       }
+      /* تحسينات لمنع ظهور شاشة بيضاء أثناء التحميل */
+      #root:empty::before {
+        content: 'جاري تحميل نظام شركة الاغبر...';
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        font-weight: bold;
+        color: #0f172a;
+      }
     </style>
   <script type="importmap">
 {
   "imports": {
+    "react": "https://esm.sh/react@^19.2.3",
     "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
-    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
     "react/": "https://esm.sh/react@^19.2.3/",
-    "react": "https://esm.sh/react@^19.2.3"
+    "lucide-react": "https://esm.sh/lucide-react@^0.562.0",
+    "@vitejs/plugin-react": "https://esm.sh/@vitejs/plugin-react@^5.1.2",
+    "vite": "https://esm.sh/vite@^7.3.0"
   }
 }
 </script>
@@ -27,6 +39,8 @@
 </head>
   <body>
     <div id="root"></div>
+    <!-- هذا السطر هو الأهم لربط الكود والعمل على GitHub -->
+    <script type="module" src="./index.tsx"></script>
   <script type="module" src="/index.tsx"></script>
 </body>
 </html>
